@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+
+:root {
+  --bisd-bg: #09090b;
+  --bisd-card: rgba(24,24,27,0.9);
+  --bisd-border: rgba(255,255,255,0.08);
+  --bisd-accent: #ef4444;
+  --bisd-text: #fafafa;
+  --bisd-muted: #a1a1aa;
+}
+
+body {
+  background:
+    radial-gradient(circle at top left, rgba(239,68,68,0.18), transparent 28%),
+    radial-gradient(circle at bottom right, rgba(220,38,38,0.15), transparent 24%),
+    var(--bisd-bg);
+  background-attachment: fixed;
+  font-family: 'Inter', sans-serif;
+}
+
+.App {
+  min-height: 100vh;
+  color: var(--bisd-text);
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255,255,255,0.12);
+  border-radius: 999px;
+}
+
+.glass,
+.card,
+.post-card {
+  background: var(--bisd-card) !important;
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border: 1px solid var(--bisd-border) !important;
+  box-shadow: 0 8px 40px rgba(0,0,0,0.35);
+}
+
+button,
+.btn,
+[role="button"] {
+  transition: all .2s ease !important;
+}
+
+button:hover,
+.btn:hover,
+.nav-item:hover {
+  transform: translateY(-2px);
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #ef4444, #b91c1c) !important;
+  border: 1px solid rgba(255,255,255,0.1) !important;
+  color: white !important;
+  box-shadow: 0 10px 30px rgba(239,68,68,0.25);
+}
+
+.btn-primary:hover {
+  filter: brightness(1.08);
+  box-shadow: 0 14px 35px rgba(239,68,68,0.4);
+}
+
+input,
+textarea,
+.input-styled {
+  background: rgba(255,255,255,0.04) !important;
+  border: 1px solid rgba(255,255,255,0.08) !important;
+  color: white !important;
+}
+
+input:focus,
+textarea:focus,
+.input-styled:focus {
+  border-color: rgba(239,68,68,0.7) !important;
+  box-shadow: 0 0 0 4px rgba(239,68,68,0.15) !important;
+}
+
+.sidebar {
+  background: rgba(10,10,10,0.92) !important;
+  backdrop-filter: blur(22px);
+  border-right: 1px solid rgba(255,255,255,0.08) !important;
+}
+
+.nav-item {
+  border-radius: 18px !important;
+}
+
+.nav-item.active,
+.nav-item[data-active="true"] {
+  background: linear-gradient(135deg, rgba(239,68,68,0.95), rgba(127,29,29,0.95)) !important;
+  color: white !important;
+  box-shadow: 0 10px 25px rgba(239,68,68,0.22);
+}
+
+img {
+  border-radius: 18px;
+}
+
+.animate-fade {
+  animation: fadeIn .35s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
